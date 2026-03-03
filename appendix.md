@@ -140,15 +140,15 @@ The planner must return a schema-valid JSON object.
 
 Invalid because:
 
-Missing required fields
+- Missing required fields
 
-Delay outside allowed range
+- Delay outside allowed range
 
-Action type not in permitted enum
+- Action type not in permitted enum
 
 
 
-Validation and Fallback Policy
+### Validation and Fallback Policy
 
 Planner outputs are validated against the enforced JSON schema before execution.
 
@@ -158,22 +158,23 @@ The agent performs up to R_retry re-queries
 
 If all retries fail, a predefined safe fallback action is executed
 
-Raw output, validation error, fallback action, and prompt ID are logged
+In all cases, the raw model output, validation error, fallback action, and prompt ID are logged
 
-Decoding Configuration and Versioned Prompts
+### Decoding Configuration and Versioned Prompts
 
 Each run records:
 
-Model identifier
+- Model identifier
 
-Decoding parameters
+- Decoding parameters
 
-Prompt version
+- Prompt version
 
-Prompt SHA256
+- Prompt SHA256
 
-Schema version
+- Schema version
 
+```json
 Example:
 llm:
   provider: groq
@@ -190,27 +191,18 @@ artifacts:
   prompt_sha256: <SHA256_OF_TEMPLATE>
   schema_version: planner_schema_v1
 
-Automation and Analysis Software Stack
-Component	Role
-Selenium + undetected_chromedriver	Browser automation
-requests	Planner/API invocation
-pyautogui / pynput	Gameplay interaction
-subprocess	Launch external applications
-sounddevice / soundfile	Synthetic VoIP audio
-paramiko	SSH/SFTP automation
-Scapy + Matplotlib	PCAP parsing and analysis
+```
+
+## Automation and Analysis Software Stack
+
+| Component | Role in the framework |
+|----------|-----------------------------|
+| Selenium + undetected_chromedriver | Browser automation for the regular-user profile |
+| Requests | Planner/API invocation |
+| Pyautogui / pynput | 	Gameplay interaction |
+| Subprocess | Launch external applications |
+| Sounddevice / soundfile | Synthetic VoIP audio |
+| Paramiko | SSH/SFTP automation |
+| Scapy + Matplotlib | PCAP parsing and analysis | 
+	
 Versioned Components Checklist
-
-Record exact versions:
-
-Component	Exact version
-VirtualBox	fill
-Windows build	fill
-Linux build	fill
-Browser	fill
-Steam	fill
-Discord	fill
-Game build	fill
-Wireshark	fill
-tcpdump	fill
-Agent Git commit	fill
