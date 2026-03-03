@@ -121,18 +121,22 @@ The planner must return a schema-valid JSON object.
   },
   "additionalProperties": false
 }
-
-
+```
+### Representative Valid Outputs
 ```json
 {"type":"search_google","termin":"latest network security incidents","delay":12}
 {"tipo":"search_google","termino":"weather forecast Malaga","delay":9}
 {"tipo":"open_url","url":"https://www.wikipedia.org/","delay":8}
 {"tipo":"watch_youtube","search":"computer networks lecture","delay":17}
 {"tipo":"show_correo","delay":14}
+```
 
+### Representative Invalid Outputs
+```json
 {"type":"open_url","term":"somewhere","delay":10}
 {"type":"watch_youtube","delay":60}
 {"type":"hack_wifi","delay":10}
+```
 
 Invalid because:
 
