@@ -190,7 +190,6 @@ artifacts:
   prompt_version: web_planner_v1
   prompt_sha256: <SHA256_OF_TEMPLATE>
   schema_version: planner_schema_v1
-
 ```
 
 ## Automation and Analysis Software Stack
