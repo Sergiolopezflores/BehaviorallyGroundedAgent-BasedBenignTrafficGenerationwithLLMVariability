@@ -121,7 +121,7 @@ The planner must return a schema-valid JSON object.
   },
   "additionalProperties": false
 }
-
+```json
 {"type":"search_google","termin":"latest network security incidents","delay":12}
 {"tipo":"search_google","termino":"weather forecast Malaga","delay":9}
 {"tipo":"open_url","url":"https://www.wikipedia.org/","delay":8}
