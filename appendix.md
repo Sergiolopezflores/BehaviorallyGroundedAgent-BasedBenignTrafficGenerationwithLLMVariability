@@ -32,21 +32,13 @@ profile action catalogues and (ii) the automation and analysis software stack,
 including the constrained planner interface and policy parameterization. 
 
 ---
-
+<!--
 ## Profile Policy Parameterization and State Management
 
 Table B.7 reports the policy hyperparameters that operationalize π(· | P)
 (Section 4.2.1). Reporting these values makes the behavioral assumptions
 explicit and supports reproducibility at the mechanism level, even when byte-
 level trace determinism is not expected.
-
-
-quitar
-This section reports the policy hyperparameters that operationalize:
-
-pi(a | P)
-
-Reporting these values makes the behavioral assumptions explicit and supports reproducibility at the mechanism level, even when byte-level trace determinism is not expected.
 
 ### Policy Hyperparameters
 
@@ -59,6 +51,7 @@ Reporting these values makes the behavioral assumptions explicit and supports re
 Fields marked **fill** should be instantiated with the exact values used in the experiments.
 
 ---
+-->
 
 ## Per-Profile Action Catalogues
 
@@ -79,8 +72,7 @@ tion timing. The action catalogue comprises:
 
 ### Gamer (interactive + VoIP)
 
-Gamer (interactive + VoIP).. The gamer agent executes a controlled game-
-play session with concurrent real-time communication. The operational se-
+Gamer (interactive + VoIP).. The gamer agent executes a controlled game-play session with concurrent real-time communication. The operational se-
 quence comprises:
 1. Launch the required clients (Steam and Discord/VoIP).
 2. Wait for and apply client/game updates when present (typically TCP-
