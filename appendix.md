@@ -114,7 +114,10 @@ Figure~\ref{fig:web_agent_modules} provides an implementation-oriented decomposi
 The planner is isolated to a narrow decision boundary (schema-constrained action proposals), while orchestration and browser automation are responsible for execution, timing perturbations, and session-budget enforcement.
 Traffic generation is therefore not a separate synthesis step; it is the observable outcome of executing real applications under these constraints.
 
-meter imagen
+
+<p align="center">
+<img src="images/RegularUser.png" alt="RegularUser" width="600">
+</p>
 ---
 
 ### Action space and parameters.
