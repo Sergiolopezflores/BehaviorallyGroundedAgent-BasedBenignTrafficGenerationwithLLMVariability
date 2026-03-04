@@ -110,7 +110,7 @@ planner is restricted to a fixed action space and must return a schema-valid
 JSON object. The agent validates each response before execution and logs
 planner configuration and template identifiers as part of the run provenance.
 
-Figure~\ref{fig:web_agent_modules} provides an implementation-oriented decomposition of the regular-user agent.
+The figure below provides an implementation-oriented decomposition of the regular-user agent.
 The planner is isolated to a narrow decision boundary (schema-constrained action proposals), while orchestration and browser automation are responsible for execution, timing perturbations, and session-budget enforcement.
 Traffic generation is therefore not a separate synthesis step; it is the observable outcome of executing real applications under these constraints.
 
@@ -129,7 +129,7 @@ file’s browsing repertoire (search, open URL, consume content, and access
 common services).
 
 ### Machine-validated output schema.
-Listing 1 defines the schema enforced at
+The Listing below defines the schema enforced at
 runtime. Only schema-compliant outputs are eligible for execution; invalid
 responses are rejected and handled via the fallback policy described below.
 
@@ -159,7 +159,7 @@ responses are rejected and handled via the fallback policy described below.
 }
 ```
 ### Representative valid outputs.
-Listing 2 shows examples that satisfy the schema
+Listing below shows examples that satisfy the schema
 and illustrate how semantic variability is introduced at the action layer
 (choice of intent and parameters) while remaining within profile constraints.
 
@@ -172,8 +172,7 @@ and illustrate how semantic variability is introduced at the action layer
 ```
 
 ### Representative invalid outputs and failure modes.
-Listing 3 provides com-
-mon invalid patterns (wrong fields, out-of-range parameters, or non-permitted
+Listing below provides common invalid patterns (wrong fields, out-of-range parameters, or non-permitted
 actions). These cases motivate enforcing a strict schema boundary.
 
 ```json
@@ -204,11 +203,11 @@ explicit quality-assurance loops to iteratively verify and correct structured
 outputs; in our case, this role is covered by bounded re-query attempts plus
 a deterministic safe fallback [22].
 
+
 ### Decoding configuration and versioned prompts.
-To support procedural re-
-producibility, each run records (i) the exact model identifier, (ii) decoding
+To support procedural reproducibility, each run records (i) the exact model identifier, (ii) decoding
 parameters, and (iii) the version identifiers of the prompt template and ac-
-tion schema. Listing 4 illustrates a minimal configuration record in YAML
+tion schema. The listing below illustrates a minimal configuration record in YAML
 form.
 
 ```json
@@ -242,4 +241,16 @@ artifacts:
 | Scapy + Matplotlib | PCAP parsing and analysis | 
 
 
+
+
+
+
+
+
+[22] Yu Yao, Salil Bhatnagar, Markus Mazzola, Vasileios Belagiannis, Igor
+Gilitschenski, Luigi Palmieri, Simon Razniewski, and Marcel Hallgar-
+ten. Agents-llm: Augmentative generation of challenging traffic scenar-
+ios with an agentic llm framework. In 2025 IEEE/RSJ International
+Conference on Intelligent Robots and Systems (IROS), pages 18400–
+18407. IEEE, 2025.
 
