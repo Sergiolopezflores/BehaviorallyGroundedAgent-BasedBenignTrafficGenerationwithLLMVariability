@@ -102,7 +102,7 @@ repro/
 
 If captures are in a single folder:
 
---input-dir .
+--input-dir
 --pattern "capturaAgente*.pcapng"
 
 
