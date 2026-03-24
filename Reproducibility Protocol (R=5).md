@@ -111,7 +111,7 @@ The scripts support glob patterns such as ```capturaAgente*.pcapng```. If you ke
 
 ## 5. Generate `captures_summary.csv`
 
-Script: scripts/pcapng_batch_to_csv.py
+Script: *scripts/pcapng_batch_to_csv.py*
 
 
 Outputs per-capture metrics:
@@ -139,7 +139,7 @@ python3 scripts/pcapng_batch_to_csv.py \
 
 ## 6. QC: identify truncated / invalid captures
 
-Script: scripts/qc_captures.py
+Script: *scripts/qc_captures.py*
 
 Run:
 
@@ -158,7 +158,7 @@ Re-capture files flagged by:
 
 ## 7. Flow metrics and Table 5 (bidirectional 5-tuples)
 
-Script: scripts/pcapng_flows_to_csv_and_table.py
+Script: *scripts/pcapng_flows_to_csv_and_table.py*
 
 Flow definition:
 
@@ -187,7 +187,7 @@ Outputs:
 
 ## 8. Optional IDS/NDR sanity-check (Isolation Forest)
 
-Script: scripts/sanity_iforest.py
+Script: *scripts/sanity_iforest.py*
 
 ### 8.1 Create Python environment
 
