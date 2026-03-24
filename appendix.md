@@ -126,6 +126,16 @@ The Listing below defines the schema enforced at runtime. Only schema-compliant 
     "url": { "type": "string", "pattern": "^https?://.+" },
     "search": { "type": "string", "minLength": 1, "maxLength": 120 }
   },
+  "allOf": [
+    { "if": { "properties": { "type": { "const": "search_google" } } },
+      "then": { "required": ["term"], "not": { "required": ["url"] } } },
+
+    { "if": { "properties": { "type": { "const": "open_url" } } },
+      "then": { "required": ["url"], "not": { "required": ["term"] } } },
+
+    { "if": { "properties": { "type": { "const": "watch_youtube" } } },
+      "then": { "not": { "required": ["url", "term"] } } }
+  ],
   "additionalProperties": false
 }
 ```
@@ -144,7 +154,7 @@ Listing below shows examples that satisfy the schema and illustrate how semantic
 Listing below provides common invalid patterns (wrong fields, out-of-range parameters, or non-permitted actions). These cases motivate enforcing a strict schema boundary.
 
 ```json
-{"type":"open_url","term":"somewhere","delay":10}
+{"type":"open_url","term":"somewhere","delay":10}  
 {"type":"watch_youtube","delay":60}
 {"type":"hack_wifi","delay":10}
 ```
