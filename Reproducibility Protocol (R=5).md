@@ -100,9 +100,10 @@ repro/
 
 ### 4.2 Flat naming convention support
 
-If captures are in a single folder:
+The scripts support glob patterns such as capturaAgente*.pcapng. If you keep a single folder, use: 
 
 --input-dir
+
 --pattern "capturaAgente*.pcapng"
 
 
