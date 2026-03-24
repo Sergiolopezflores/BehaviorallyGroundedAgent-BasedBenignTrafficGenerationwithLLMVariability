@@ -164,7 +164,7 @@ Script: *scripts/pcapng_flows_to_csv_and_table.py*
 Flow definition:
 
 - Key = protocol + unordered pair (IP, port)
-- Bytes = sum of frame.len
+- Bytes = sum of *frame.len*
 - Duration = last_ts − first_ts
 - Packets = count per flow
 - ICMP / non-TCP-UDP excluded
