@@ -140,6 +140,8 @@ python3 scripts/pcapng_batch_to_csv.py \
 
 Script: *scripts/qc_captures.py*
 
+Some captures can be truncated (e.g., capture stopped mid-packet). QC flags such captures so they can be re-captured and excluded from aggregation. 
+
 Run:
 
 ```bash
