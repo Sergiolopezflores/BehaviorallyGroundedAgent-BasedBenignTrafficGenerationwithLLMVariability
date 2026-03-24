@@ -100,7 +100,7 @@ repro/
 
 ### 4.2 Flat naming convention support
 
-The scripts support glob patterns such as capturaAgente*.pcapng. If you keep a single folder, use: 
+The scripts support glob patterns such as ```capturaAgente*.pcapng```. If you keep a single folder, use: 
 
 --input-dir
 
