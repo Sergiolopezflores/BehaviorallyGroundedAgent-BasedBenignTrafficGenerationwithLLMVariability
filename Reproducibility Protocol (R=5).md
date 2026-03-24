@@ -190,6 +190,8 @@ Outputs:
 
 Script: *scripts/sanity_iforest.py*
 
+Goal: show that a **homogeneous benign baseline** (trained on regular-user runs) flags some benign operational roles (admin) as out-of-distribution, and that a **mixed-profile baseline** mitigates that effect under the same model and feature set. 
+
 ### 8.1 Create Python environment
 
 ```bash
