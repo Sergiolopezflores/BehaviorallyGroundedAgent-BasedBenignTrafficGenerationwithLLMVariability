@@ -4,7 +4,7 @@ Estos resultados han sido (parcialmente) financiados por la Cátedra Internacion
 
 The structure of this repository is as follows:
 
-# Derived
+## derived
 Where the results of the runs are stored
 
 # Images
