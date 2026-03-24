@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Training baseline (15m)} & \textbf{Gamer flagged (\%)} & \textbf{Admin flagged (\%)} \\
+\midrule
+Regular only & 0.0 & 100.0 \\
+Mixed profiles & 0.0 & 0.0 \\
+\bottomrule
+\end{tabular}
+\caption{Sanity check with an unsupervised anomaly detector (Isolation Forest) over per-run summary features. Values report the fraction of benign runs flagged as anomalous under the specified training baseline.}
+\label{tab:sanity_iforest}
+\end{table}

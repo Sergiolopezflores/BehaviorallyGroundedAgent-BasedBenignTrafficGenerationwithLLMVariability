@@ -1,0 +1,29 @@
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrrr}
+\toprule
+\textbf{Profile} & \textbf{Dur.} &
+\textbf{Flows} & \textbf{Flows/min} &
+\textbf{Median bytes/flow} & \textbf{Median dur. (s)} & \textbf{Median pkts/flow} \\
+\midrule
+Regular & 5m & 798 [181] & 139.80 [20.23] & 738 [346] & 0.0496 [0.0039] & 11 [6] \\
+Regular & 15m & 1661 [98] & 109.49 [5.81] & 768 [20] & 0.0530 [0.0061] & 11 \\
+Regular & 60m & 6349 [633] & 103.96 [13.14] & 797 [4] & 0.0602 [0.0134] & 11 \\
+\midrule
+Gamer & 5m & 298 [49] & 53.47 [1.28] & 328 & 0.1421 [0.1284] & 2 \\
+Gamer & 15m & 507 [14] & 31.82 [2.32] & 222 [20] & 0.0083 [0.0053] & 2 \\
+Gamer & 60m & 1604 [76] & 26.49 [1.49] & 205 & 0.0000 & 1 \\
+\midrule
+Administrator & 5m & 162 [14] & 30.73 [1.28] & 144 [1] & 0.0009 [0.0001] & 2 \\
+Administrator & 15m & 431 [32] & 27.71 [2.56] & 146 & 0.0008 [0.0002] & 2 \\
+Administrator & 60m & 1682 [38] & 27.86 [0.55] & 146 & 0.0008 [0.0001] & 2 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Flow-level structure metrics by profile and duration. Values are reported as median~[IQR] over $R=5$ independent runs per condition. Flows are bidirectional TCP/UDP 5-tuples; non-TCP/UDP traffic is excluded from flow aggregation.}
+\label{tab:flow_structure}
+\end{table*}
